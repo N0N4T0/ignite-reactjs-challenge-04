@@ -9,7 +9,7 @@ interface IFoodPlate {
 	image: string;
 	name: string;
 	description: string;
-	price: number;
+	price: string;
 	available: boolean;
 }
 

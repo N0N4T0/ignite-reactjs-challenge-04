@@ -1,8 +1,7 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 
 import { FiCheckSquare } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
-
 import { Form } from './styles';
 import Modal from '../Modal';
 import Input from '../Input';
@@ -34,7 +33,7 @@ const ModalEditFood: React.FC<IModalProps> = ({
   isOpen,
   setIsOpen,
   editingFood,
-  handleUpdateFood
+  handleUpdateFood,
 }) => {
   const formRef = useRef<FormHandles>(null);
 
@@ -66,6 +65,6 @@ const ModalEditFood: React.FC<IModalProps> = ({
       </Form>
     </Modal>
   );
-}
+};
 
 export default ModalEditFood;
