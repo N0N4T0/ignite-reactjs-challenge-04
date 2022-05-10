@@ -1,14 +1,17 @@
-import React from 'react';
+import {
+    BrowserRouter as Router, 
+    Route, 
+    Routes
+} from 'react-router-dom' 
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Dashboard } from "../pages/Dashboard"
 
-import Dashboard from '../pages/Dashboard';
-
-const Routes : React.FC = () => (
-  <Router>
-    <Route path="/"> {Dashboard} </Route> 
-  </Router>
-  
-);
-
-export default Routes;
+export function AppRoutes(){
+    return(
+        <Router>
+            <Routes>
+                <Route path="/" element={<Dashboard/>}/>
+            </Routes>
+        </Router>
+    )
+}

@@ -19,7 +19,7 @@ interface IFoodPlate {
   available: boolean;
 }
 
-const Dashboard: React.FC = () => {
+export function Dashboard() {
   const [foods, setFoods] = useState<IFoodPlate[]>([]);
   const [editingFood, setEditingFood] = useState<IFoodPlate>({} as IFoodPlate);
   const [modalOpen, setModalOpen] = useState(false);
@@ -119,12 +119,10 @@ const Dashboard: React.FC = () => {
               key={food.id}
               food={food}
               handleDelete={handleDeleteFood}
-              handleEditFood={handleEditFood}
+              handleEdit={handleEditFood}
             />
           ))}
       </FoodsContainer>
     </>
   );
 };
-
-export default Dashboard;
